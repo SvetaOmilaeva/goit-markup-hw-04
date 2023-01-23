@@ -1,0 +1,324 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {box-sizing: inherit;}
+
+:root {
+    --primary-text-color: #434455;
+    --title-text-color: #2E2F42;
+    --accent-color: #4D5AE5;
+    --primary-white-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    /* outline: 2px solid lime; */
+}
+
+.section {   
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+body {
+    background: var(--primary-white-color);
+    color: var(--primary-text-color);   
+    font-family: 'Roboto', sans-serif;
+}
+/* Header */
+.page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E7E9FC;
+}
+.page-header .container {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav,
+.site-nav,
+.contacts {
+    display: flex;
+}
+
+.site-nav .item:not(:last-child),
+.contacts .item:not(:last-child) {
+    margin-right: 40px;
+
+} 
+/* Logo */
+
+.logo {
+    margin-right: 76px;
+
+    color: var(--primary-text-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+}
+.logo-web {color: var(--accent-color);}
+
+/* убрать маркер списка*/
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.link {text-decoration: none;}
+
+/* навигация */
+.site-nav .link {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+.site-nav .link:hover,
+.site-nav .link:focus
+{color: var(--primary-text-color)}
+
+.site-nav .link.current {color: var(--accent-color);}
+
+.contacts {
+    margin-left: auto;
+}
+.contacts .link {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+.contacts .link:hover, .contacts .link:focus {color: var(--accent-color);}
+
+/* Hero */
+.hero {
+    background: var(--title-text-color);
+    padding-top: 188px;
+    padding-bottom: 188px;
+    /* margin-bottom: 120px; */
+
+}
+.hero-title {
+    margin-bottom: 48px;
+
+    text-align: center;
+    color: var(--primary-white-color);
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+}
+/* button */
+.btn {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn.primary {
+    border-radius: 4px;
+    padding: 16px 32px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+
+    background: var(--accent-color);
+    color: var(--primary-white-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+}
+
+/* Sections */
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 72px;
+
+    color: var(--title-text-color);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+}
+
+/* About webstudio */
+
+.feature {
+    padding-bottom: 0px;
+}
+
+.container .feature-lists {
+    display: flex;
+    align-items: center;
+}
+.feature-lists .item {
+    width: 264px;
+}
+.feature-lists .item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.feature-lists .title,
+.team .card-name,
+.galery .card-name {
+    margin-bottom: 8px;
+
+    color: var(--title-text-color);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+/* What are we doing */
+/* .works {
+    padding-bottom: 120px;
+} */
+.container .works-lists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.works-lists .item {
+    background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
+    background-blend-mode: soft-light, normal;
+    border: 1px solid #E7E9FC;
+}
+
+/* our team */
+.container .team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+}
+.section.team {
+    background: #F4F4FD;  
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+}
+
+.team .card-name {
+    margin-top: 32px;
+}
+
+.team .card {
+    text-align: center;
+    padding-bottom: 32px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+
+    background: var(--primary-white-color);
+}
+
+/* footer */
+.page-footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background: var(--title-text-color);
+}
+
+.page-footer .logo {
+    margin-right: 0;
+    line-height: 1.17;
+    color: #F4F4FD;
+}
+.page-footer .text {
+    margin-top: 16px;
+    color: #E7E9FC;
+}
+
+/* portfolio */
+.portfolio {
+    padding-top: 96px;
+    /* padding-bottom: 120px; */
+}
+
+/* filter */
+.container .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+}
+.filter .btn {
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid #E7E9FC;
+
+    background: #F4F4FD;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+.filter .btn:hover{
+    background-color: #404BBF;
+    color: var(--primary-white-color);
+    }
+
+.galery {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+}
+.galery .card-name {
+    padding-top: 32px;
+    padding-left: 16px;
+}
+.galery .text {
+    padding-bottom: 32px;
+    padding-left: 16px;
+}
+.galery .card {
+    margin-right: 24px;
+    margin-bottom: 48px;
+    width: calc((100% - 48px) / 3);
+
+    box-sizing: border-box;
+    border: 1px solid #E7E9FC;
+    background: var(--primary-white-color)
+} 
+.galery .card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.galery .card:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
