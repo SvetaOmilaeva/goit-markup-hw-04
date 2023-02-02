@@ -105,14 +105,16 @@ body {
 /* Hero */
 .hero {
     background-color: var(--title-text-color);
+    max-width: 1440px;
+    margin: 0 auto;
     padding-top: 188px;
     padding-bottom: 188px;
+    
     background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* margin-bottom: 120px; */
 
 }
 .hero-title {
@@ -147,7 +149,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.04em;
 }
-.btn.primary:hover {
+.btn.primary:hover, .btn.primary:focus {
     background: #404BBF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -184,8 +186,12 @@ body {
 }
 
 .feature-lists .thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #F4F4FD;
-    padding: 24px 100px;
+    width: 264px;
+    height: 112px;
 
     border-radius: 4px;
     margin-bottom: 8px;
@@ -210,7 +216,7 @@ body {
 }
 /* What are we doing */
 
-.container .works-lists{
+.container .works-lists {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,7 +244,6 @@ body {
 .team .card-name {
     margin-top: 32px;
 }
-
 .team .card {
     text-align: center;
     padding-bottom: 32px;
@@ -260,22 +265,21 @@ body {
 }
 .team .social-links .button,
 .footer-social-media .social-links .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    padding: 12px;
 }
 .team .social-links .button {
     background: var(--accent-color);
 }
-.team .button:hover {
+.team .button:hover, .team .button:focus {
     background: #404BBF;
 }
 .team .social-icon,
 .footer-social-media .social-icon {
-    width: 16px;
-    height: 16px;
 
     fill: #f4f4fd;
 }
@@ -289,29 +293,24 @@ body {
     gap: 24px;
 }
 .customers-links .item {
-    width: 168px;
-    height: 88px;
-    padding: 16px 32px;
+    width: calc((100%-120px)/6);
 
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
 }
-.customers-links .item:hover {
+.customers-links .link:hover, .customers-links .link:focus {
     border: 1px solid #404BBF;
-}
-.company-icon {   
-    fill: #8e8f99;
-}
-
-.company-icon:hover {
     fill: #404BBF;
 }
 .customers-links .link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-}
+    height: 88px;
 
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    fill: #8e8f99;
+}
 
 /* footer */
 .page-footer {
@@ -352,14 +351,14 @@ body {
 .footer-social-media .social-links .button {
     background: rgba(255, 255, 255, 0.1);
 }
-.footer-social-media .social-links .button:hover {
+.footer-social-media .social-links .button:hover,
+.footer-social-media .social-links .button:focus {
     background: #31D0AA;
 }
 
 /* portfolio */
 .portfolio {
     padding-top: 96px;
-    /* padding-bottom: 120px; */
 }
 
 /* filter */
@@ -383,7 +382,7 @@ body {
     text-align: center;
     letter-spacing: 0.04em;
 }
-.filter .btn:hover{
+.filter .btn:hover, .filter .btn:focus {
     background-color: #404BBF;
     color: var(--primary-white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -394,13 +393,11 @@ body {
 .galery {
     display: flex;
     flex-wrap: wrap;
-
 }
 img {
     display: block;
     max-width: 100%;
     height: auto;
-    
 }
 .galery .card-name {
     padding-top: 32px;
@@ -414,11 +411,13 @@ img {
     margin-right: 24px;
     margin-bottom: 48px;
     width: calc((100% - 48px) / 3);
-
+} 
+.galery .link {
+    display: block;
     box-sizing: border-box;
     border: 1px solid #E7E9FC;
     background: var(--primary-white-color)
-} 
+}
 .galery .card:nth-child(3n) {
     margin-right: 0;
 }
@@ -427,7 +426,7 @@ img {
     margin-bottom: 0;
 }
 
-.galery .card:hover {
+.galery .link:hover, .galery .link:focus {
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
